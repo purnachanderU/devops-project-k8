@@ -27,5 +27,6 @@ WORKDIR /usr/src/app/
 COPY ./products/ ./products/
 COPY --from=builder /usr/src/app/product-catalog/ ./
 
+EXPOSE 8080
 ENV PRODUCT_CATALOG_PORT=8088
 ENTRYPOINT [ "./product-catalog" ]
